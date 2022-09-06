@@ -523,17 +523,14 @@ parallel -j 5 scan :::: "$file"
 clear
 function scan {
 	response=$(dig a "$1")
-	if [[ $response =~ "NXDOMAIN" ]]
+	if [[ $response =~ "NXDOMAIN" ]] || [[ $response =~ "CNAME" ]]
 	then
 		echo -e "\e[93m[Found] "$1" \e[0m"
-		echo "$1" >> NXDOMAIN.txt
-	if [[ $response =~ "CNAME" ]]
-	then
-		echo -e "\e[93m[Found] "$1" \e[0m"
-		echo "$1" >> CNAME.txt
+		echo "$1 \ 
+		$response" >> Tekover.txt
+		echo ""
 	else
 		echo -e "\e[0;31m[Not Found] "$1" \e[0m"
-	fi
 	fi
 }
 echo "_____________________________________"
