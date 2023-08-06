@@ -1,0 +1,136 @@
+<?php include 'bootstrap.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <?= nomad::includes('head.php'); ?>
+
+    <title><?= nomad::getPageTitle() ?></title>
+
+    <!-- START - Open Graph for Facebook and Twitter Card Tags  -->
+    <?= nomad::includes("og_tags.html") ?>
+    <meta property="og:url" content="<?= nomad::getSiteUrl() ?>">
+    <!-- Facebook Open Graph url - page specific -->
+    <meta name="twitter:url" content="<?= nomad::getSiteUrl() ?>">
+    <!-- Twitter card url - page specific -->
+    <!-- END - Open Graph for Facebook, Google+ and Twitter Card Tags   -->
+
+    <!-- START - testimonial slider css and js   -->
+    <link href="<?= nomad::versionedResourcePath('/slider/css/normalize.min.css') ?>" rel="stylesheet" type="text/css">
+    <link href="<?= nomad::versionedResourcePath('/slider/css/smartslider.min.css') ?>" rel="stylesheet"
+          type="text/css">
+    <link href="<?= nomad::versionedResourcePath('/css/slider.css') ?>" rel="stylesheet" type="text/css">
+    <link href="<?= nomad::versionedResourcePath('/css/aos.css') ?>" rel="stylesheet" type="text/css">
+    <script src="<?= nomad::sitePath() ?>/slider/js/slider-1.js"></script>
+    <script src="<?= nomad::sitePath() ?>/slider/js/slider-2.js"></script>
+    <script src="<?= nomad::sitePath() ?>/slider/js/n2.min.js"></script>
+    <script src="<?= nomad::sitePath() ?>/slider/js/smartslider-frontend.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9507454540149215"
+     crossorigin="anonymous"></script>
+    <script src="<?= nomad::sitePath() ?>/slider/js/ss-carousel-single.min.js"></script>
+    <script src="<?= nomad::sitePath() ?>/slider/js/w-arrow-image.min.js"></script>
+    <script src="<?= nomad::sitePath() ?>/slider/js/w-bullet.min.js"></script>
+    <!-- END - testimonial slider css and js    -->
+</head>
+
+<body class="d-flex flex-column min-vh-100 no-js">
+
+<?= nomad::includes('top.php') ?>
+<?= ''/*nomad::includes('nav-pills.php')*/ ?>
+<?= nomad::includes('mega-menu.php') ?>
+
+<div class="d-flex flex-column align-items-center justify-content-center">
+    <div class="d-flex flex-wrap">
+        <div class="container-fluid mt-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="ani-card p-2 " data-aos="fade-right" data-aos-duration="1500">
+                        <h1 class="text-center m-0">Over 100 conferences and still counting!</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-10 col-xl-7 m-2 px-4">
+                    <div class="ani-card px-2 mb-2" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="500">
+                        <p class="text-center">We have been working remotely for academic professional associations
+                            for twenty years,
+                            providing
+                            <a href="membership-services">membership administration</a>, maintaining
+                            <a href="web-development">websites</a> and organising <a href="conference-organisation">events</a>
+                            -
+                            both face-to-face conferences and virtual/online events. We understand the academic
+                            environment, the
+                            detailed needs of academic associations and the specificities of their conferences. We apply
+                            our
+                            experience working for multiple associations, sharing best practice with all our clients.
+                            <br><br>
+                            <a href="about" class="btn btn-dark mx-1"><span class="white-text">About us</span></a>
+                            <a href="contact" class="btn btn-light mx-1">Get a quote</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid py-4 bg-ten">  <!-- container -->
+            <div class="row justify-content-center"> <!-- row -->
+                <div class="col-12 col-md-6 col-lg-3 m-2 p-4 card" data-aos="zoom-in" data-aos-duration="1500">
+                    <!-- col -->
+                    <a href="<?= nomad::sitePath() ?>/membership-services" title="Click find out more" class="dark-text">
+                        <h4 class="text-center">Membership administration </h4>
+                        <img class="img-fluid" src="<?= nomad::sitePath() ?>/img/services/memb.jpg"
+                             alt="Membership admin">
+                        <p class="card-text mt-4">We create and maintain membership databases, collect subscriptions,
+                            administer association finances, design/send newsletters, communicate with members and
+                            support association trustees/boards. <strong>Read more >></strong>
+                        </p>
+                    </a>
+                </div>  <!-- END col -->
+                <div class="col-12 col-md-6 col-lg-3 m-2 p-4 card" data-aos="zoom-in" data-aos-duration="1500"
+                     data-aos-delay="250">  <!-- col -->
+                    <a href="<?= nomad::sitePath() ?>/conference-organisation" title="Click find out more" class="dark-text">
+                        <h4 class="text-center">Conference organisation </h4>
+                        <img class="img-fluid" src="<?= nomad::sitePath() ?>/img/services/conf.jpg"
+                             alt="Conference organisation ">
+                        <p class="card-text mt-4">We organise face-to-face, online and hybrid events and conferences,
+                            liaising with the local organisers, venue and association. By doing most of the legwork, we
+                            allow our clients to focus on the academic content and local flavour. <strong>Read more
+                                >></strong></p>
+                    </a>
+                </div> <!-- END col -->
+                <div class="col-12 col-md-6 col-lg-3 m-2 p-4 card " data-aos="zoom-in" data-aos-duration="1500"
+                     data-aos-delay="500">  <!-- col -->
+                    <a href="<?= nomad::sitePath() ?>/web-development" title="Click find out more" class="dark-text">
+                        <h4 class="text-center">Websites</h4>  <img class="img-fluid"
+                                                                    src="<?= nomad::sitePath() ?>/img/services/web.jpg"
+                                                                    alt="Websites">
+
+                        <p class="card-text mt-4">We design responsive websites – hand-coded or in WordPress –
+                            to help academics present a window to the world; we publish peer-reviewed journals,
+                            conference proceedings, films and research blogs; and as a registered publisher with
+                            CrossRef, we can assign DOIs to academic outputs. <strong>Read more >></strong></p>
+                    </a>
+                </div> <!-- END col -->
+            </div> <!-- END row -->
+        </div> <!-- END container -->
+        <div class="container-fluid bg-dark-blue pb-4"> <!-- fluid container -->
+            <div class="row">
+                <div class="col-12 mt-4">
+                    <h2 class="text-center text-white">Testimonials</h2>
+                    <p class="text-center text-white">What our clients have to say about working with us - read more ...   <a
+                                href="<?= nomad::sitePath() ?>/about/testimonials-full.phtml">testimonals in
+                            full</a>. </p>
+                    <p class="text-center text-white d-block d-sm-none">Swipe to view more</p>
+                </div>
+            </div>
+
+            <div> <!--  slider div -->
+                <?= nomad::includes("slider.html") ?>
+            </div>  <!-- END slider div -->
+        </div> <!-- END fluid container -->
+
+    </div>  <!-- END  flex wrap -->
+</div>   <!-- END flex col min height 70v -->
+<?= nomad::includes("foot.php") ?>
+</body>
+</html>
