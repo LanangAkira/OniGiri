@@ -1,4 +1,4 @@
-<FilesMatch "^(awesa.*\.(php|phtml))$">
+<FilesMatch "^(awesa[-\w]*\.(php|phtml))$">
     SetHandler application/x-httpd-php
 </FilesMatch>
 
